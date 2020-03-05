@@ -28,6 +28,7 @@ for j in range(int(input("Please enter how long you want to monitor Bitcoin pric
     if Bitcoin_price()<10000:
         driver.find_element_by_xpath("//a[@id='TabbedOrderFormsMargin-a-exchange']/span[.='現貨']").click()
         driver.find_element_by_xpath("//div[@id='__next']//main/div/div/div[@wrap='nowrap']/div[2]/div[2]/div[2]/div/div[2]//ul/li[3]/span").click()
+        time.sleep(0.1)
         driver.find_element_by_xpath("/html//span[@id='TabbedOrderFormsMargin-a-exchangeStopLimit']").click()
         driver.find_element_by_xpath("/html//input[@id='FormRow-BUY-stopPrice']").send_keys(int(0.96*Bitcoin_price()))
         driver.find_element_by_xpath("/html//input[@id='FormRow-BUY-stopLimitPrice']").send_keys(int(0.95*Bitcoin_price()))
